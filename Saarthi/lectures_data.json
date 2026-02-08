@@ -1,0 +1,153 @@
+{
+  "CSE": {
+    "1": {
+      "Linear Algebra (MA1161, 3)": [
+        {
+          "name": " System of Linear Equations",
+          "link": "https://www.youtube.com/embed/VsQSt1jqknk"
+        },
+        {
+          "name": " Elementary Row Operations",
+          "link": "https://www.youtube.com/embed/VsQSt1jqknk"
+        },
+        {
+          "name": "Row-Reduced Echelon Form ",
+          "link": "https://www.youtube.com/embed/5nsdoUfGpFE"
+        },
+        {
+          "name": "Vector Spaces-I",
+          "link": "https://www.youtube.com/embed/aEF5PPbv8Oc"
+        },
+        {
+          "name": "Vector Spaces-II",
+          "link": "https://www.youtube.com/embed/BQ6bUhF4tPM"
+        },
+        {
+          "name": " Basis and Dimensions-I",
+          "link": "https://www.youtube.com/embed/mNB7cDaXshQ"
+        },
+        {
+          "name": "Basis and Dimensions-II",
+          "link": "https://www.youtube.com/embed/wXhtEtJQx2U"
+        }
+      ],
+      "E.Physics (PH1161, 4)": [
+        {
+          "name": "Lecture 1",
+          "link": "#"
+        },
+        {
+          "name": "Lecture 2",
+          "link": "#"
+        }
+      ],
+      "ETC (HS1161, 3)": [
+        {
+          "name": "Lecture 1",
+          "link": "#"
+        },
+        {
+          "name": "Lecture 2",
+          "link": "#"
+        }
+      ],
+      "PDS (CS1101, 3)": [
+        {
+          "name": "Lecture 1",
+          "link": "#"
+        },
+        {
+          "name": "Lecture 2",
+          "link": "#"
+        }
+      ],
+      "Biology (BT1161, 2)": [
+        {
+          "name": "Lecture 1",
+          "link": "#"
+        },
+        {
+          "name": "Lecture 2",
+          "link": "#"
+        },
+        {
+          "name": "Lecture 3",
+          "link": "#"
+        },
+        {
+          "name": "Lecture 4",
+          "link": "#"
+        }
+      ],
+      "PDS Lab (CS1103, 2)": [
+        {
+          "name": "Lecture 1",
+          "link": "#"
+        },
+        {
+          "name": "Lecture 2",
+          "link": "#"
+        }
+      ]
+    },
+    "2": {
+      "Integral and Vector Calculus, Laplace and Fourier Transforms (MA1162, 3)": [],
+      "Basic Electrical & Electronics Engineering (EE1161, 3)": [
+        {
+          "name": "Lecture 1",
+          "link": "#"
+        },
+        {
+          "name": "Lecture 2",
+          "link": "#"
+        }
+      ],
+      "Design Thinking (CS1102, 3)": [
+        {
+          "name": "Lecture 1",
+          "link": "#"
+        },
+        {
+          "name": "Lecture 2",
+          "link": "#"
+        }
+      ],
+      "Optimization Techniques (CS1104, 3)": [
+        {
+          "name": "Lecture 1",
+          "link": "#"
+        },
+        {
+          "name": "Lecture 2",
+          "link": "#"
+        }
+      ],
+      "Data Structures and Algorithms (CS1106, 4)": [
+        {
+          "name": "Lecture 1",
+          "link": "#"
+        },
+        {
+          "name": "Lecture 2",
+          "link": "#"
+        }
+      ],
+      "Web Programming Lab (CS1108, 2)": [
+        {
+          "name": "Lecture 1",
+          "link": "#"
+        }
+      ],
+      "Mathematical Foundations of CS (CS1110, 3)": [
+        {
+          "name": "Lecture 1",
+          "link": "#"
+        },
+        {
+          "name": "Lecture 2",
+          "link": "#"
+        }
+      ]
+    }
+  }
+}

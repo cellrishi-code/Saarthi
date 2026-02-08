@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Not Available</title>
+
+<style>
+:root{
+    --green:#4caf50;
+    --light:#81c784;
+    --bg1:#e8f5e9;
+    --bg2:#c8e6c9;
+}
+
+/* Background */
+body{
+    margin:0;
+    font-family:Segoe UI, sans-serif;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,var(--bg1),var(--bg2));
+}
+
+/* Card */
+.card{
+    background:white;
+    padding:40px 50px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 12px 40px rgba(0,0,0,.15);
+    max-width:450px;
+}
+
+/* Icon */
+.icon{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+/* Message */
+.msg{
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+/* Button */
+.btn{
+    background:linear-gradient(135deg,var(--green),var(--light));
+    border:none;
+    padding:12px 22px;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* Dark Mode */
+.dark{
+    background:#121212;
+}
+
+.dark .card{
+    background:#1e1e1e;
+    color:white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="icon">⚠️</div>
+
+    <div class="msg">
+        <%= message || "Content not available yet" %>
+    </div>
+
+    <button class="btn" onclick="window.history.back()">
+        Go Back
+    </button>
+</div>
+
+<script>
+/* Restore theme */
+if(localStorage.getItem("theme")==="dark"){
+    document.body.classList.add("dark");
+}
+</script>
+
+</body>
+</html>

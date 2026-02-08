@@ -1,0 +1,153 @@
+{
+  "CSE": {
+    "1": {
+      "Linear Algebra (MA1161, 3)": [
+        {
+          "name": " System of Linear Equations",
+          "link": "https://drive.google.com/file/d/1WYS0gUc0JxcFe7nNrlgmM9yvu3wf7aLF/view?usp=sharing"
+        },
+        {
+          "name": " Elementary Row Operations",
+          "link": "https://drive.google.com/file/d/1OBqdmujoWHPnxOYtHM28An0IE6NLMxoJ/view?usp=sharing"
+        },
+        {
+          "name": "Row-Reduced Echelon Form ",
+          "link": "https://drive.google.com/file/d/1OBqdmujoWHPnxOYtHM28An0IE6NLMxoJ/view?usp=sharing"
+        },
+        {
+          "name": "Vector Spaces-I",
+          "link": "https://drive.google.com/file/d/1OBqdmujoWHPnxOYtHM28An0IE6NLMxoJ/view?usp=sharing"
+        },
+        {
+          "name": "Vector Spaces-II",
+          "link": "https://drive.google.com/file/d/1OBqdmujoWHPnxOYtHM28An0IE6NLMxoJ/view?usp=sharing"
+        },
+        {
+          "name": " Basis and Dimensions-I",
+          "link": "https://drive.google.com/file/d/1OBqdmujoWHPnxOYtHM28An0IE6NLMxoJ/view?usp=sharing"
+        },
+        {
+          "name": "Basis and Dimensions-II",
+          "link": "https://drive.google.com/file/d/1OBqdmujoWHPnxOYtHM28An0IE6NLMxoJ/view?usp=sharing"
+        }
+      ],
+      "E.Physics (PH1161, 4)": [
+        {
+          "name": "Notes 1",
+          "link": "#"
+        },
+        {
+          "name": "Notes 2 2",
+          "link": "#"
+        }
+      ],
+      "ETC (HS1161, 3)": [
+        {
+          "name": "Note 1",
+          "link": "#"
+        },
+        {
+          "name": "Note 2",
+          "link": "#"
+        }
+      ],
+      "PDS (CS1101, 3)": [
+        {
+          "name": "Note 1",
+          "link": "#"
+        },
+        {
+          "name": "Note 2",
+          "link": "#"
+        }
+      ],
+      "Biology (BT1161, 2)": [
+        {
+          "name": "Note 1",
+          "link": "#"
+        },
+        {
+          "name": "Note 2",
+          "link": "#"
+        },
+        {
+          "name": "Note 3",
+          "link": "#"
+        },
+        {
+          "name": "Note 4",
+          "link": "#"
+        }
+      ],
+      "PDS Lab (CS1103, 2)": [
+        {
+          "name": "Note 1",
+          "link": "#"
+        },
+        {
+          "name": "Note 2",
+          "link": "#"
+        }
+      ]
+    },
+    "2": {
+      "Integral and Vector Calculus, Laplace and Fourier Transforms (MA1162, 3)": [],
+      "Basic Electrical & Electronics Engineering (EE1161, 3)": [
+        {
+          "name": "Note 1",
+          "link": "#"
+        },
+        {
+          "name": "Note 2",
+          "link": "#"
+        }
+      ],
+      "Design Thinking (CS1102, 3)": [
+        {
+          "name": "Note 1",
+          "link": "#"
+        },
+        {
+          "name": "Note 2",
+          "link": "#"
+        }
+      ],
+      "Optimization Techniques (CS1104, 3)": [
+        {
+          "name": "Note 1",
+          "link": "#"
+        },
+        {
+          "name": "Note 2",
+          "link": "#"
+        }
+      ],
+      "Data Structures and Algorithms (CS1106, 4)": [
+        {
+          "name": "Note 1",
+          "link": "#"
+        },
+        {
+          "name": "Note 2",
+          "link": "#"
+        }
+      ],
+      "Web Programming Lab (CS1108, 2)": [
+        {
+          "name": "Note 1",
+          "link": "#"
+        }
+      ],
+      "Mathematical Foundations of CS (CS1110, 3)": [
+        {
+          "name": "Note 1",
+          "link": "#"
+        },
+        {
+          "name": "Note 2",
+          "link": "#"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SAARTHI</title>
+
+<style>
+
+.pw-container{
+    max-width:1000px;
+    margin:auto;
+    padding:30px;
+}
+
+/* Tabs */
+.tab-bar{
+    display:flex;
+    gap:20px;
+    border-bottom:2px solid #ddd;
+    margin-bottom:25px;
+}
+
+.tab{
+    padding:12px 20px;
+    cursor:pointer;
+    font-weight:600;
+    color:#666;
+}
+
+.tab.active{
+    color:#2e7d32;
+    border-bottom:3px solid #2e7d32;
+}
+
+/* Cards */
+.list-card{
+    background:white;
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.list-card{
+    transition:.25s ease;
+}
+
+.list-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 16px rgba(0,0,0,0.12);
+}
+
+.list-card.active{
+    border-left:5px solid #2e7d32;
+}
+
+/* Buttons */
+.watch-btn{
+    background:linear-gradient(135deg,#4caf50,#81c784);
+    color:white;
+    padding:8px 16px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* Video Player */
+.video-container{
+    margin:12px 0 20px 0;
+    display:none;
+    background:black;
+    border-radius:12px;
+    overflow:hidden;
+    position:relative;
+}
+
+.video-container iframe{
+    width:100%;
+    height:420px;
+}
+
+.close-btn{
+    position:absolute;
+    right:10px;
+    top:10px;
+    background:red;
+    color:white;
+    border:none;
+    padding:6px 12px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* Tab content */
+.tab-content{
+    display:none;
+}
+.tab-content.active{
+    display:block;
+}
+/* ===== Animated Gradient Background ===== */
+body{
+    background: linear-gradient(135deg,#e8f5e9,#c8e6c9,#a5d6a7);
+    background-size:400% 400%;
+    animation:bgMove 15s ease infinite;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* ===== Waves ===== */
+.wave-bg{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    height:150px;
+    z-index:-1;
+    opacity:.2;
+}
+
+.wave{
+    position:absolute;
+    width:200%;
+    height:100%;
+    background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z" fill="%234caf50"/></svg>') repeat-x;
+    animation:wave 18s linear infinite;
+}
+
+.wave:nth-child(2){
+    animation-duration:12s;
+    opacity:.5;
+}
+
+@keyframes wave{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+}
+
+/* ===== Particles ===== */
+#particles{
+    position:fixed;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.particle{
+    position:absolute;
+    width:12px;
+    height:12px;
+    background:#81c784;
+    border-radius:50%;
+    opacity:.3;
+    animation:float 20s infinite;
+}
+
+@keyframes float{
+    from{transform:translateY(0);}
+    to{transform:translateY(-800px);}
+}
+
+/* ===== Controls ===== */
+.controls{
+    position:fixed;
+    top:20px;
+    right:20px;
+    display:flex;
+    gap:10px;
+}
+
+.controls button{
+    border:none;
+    padding:10px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:16px;
+}
+
+/* ===== Dark Mode ===== */
+.dark{
+    background:#121212 !important;
+    color:white;
+}
+
+.dark .list-card{
+    background:#1e1e1e;
+    color:white;
+}
+
+.dark .tab{
+    color:#aaa;
+}
+.dark{
+    background:#121212 !important;
+}
+
+.dark .pw-container{
+    color:white;
+}
+
+.dark .watch-btn{
+    background:#2e7d32;
+}
+
+
+
+</style>
+</head>
+
+<body>
+<!-- Wave Background -->
+<div class="wave-bg">
+    <div class="wave"></div>
+    <div class="wave"></div>
+</div>
+
+<!-- Particles -->
+<div id="particles"></div>
+
+<!-- Controls -->
+<div class="controls">
+    <button id="themeBtn">🌙</button>
+    <button id="soundBtn">🔊</button>
+</div>
+
+<div class="pw-container">
+
+
+<h1><%=sub%></h1>
+
+<div class="tab-bar">
+    <div class="tab active" onclick="showTab(event,'lectures')">Lectures</div>
+    <div class="tab" onclick="showTab(event,'notes')">Notes</div>
+    <!-- <div class="tab" onclick="showTab(event,'practice')">Extra Material</div> -->
+</div>
+
+<div id="lectures" class="tab-content active">
+
+    
+
+    <% for(let lec of topic ) { %>
+
+ <div class="list-card">
+        <div><%=lec.name%></div>
+        <button class="watch-btn"
+            onclick="playVideo(this,'<%=lec.link %>')">
+            Watch
+        </button>
+    </div>
+<%}%>
+   
+
+
+  
+
+</div>
+<div id="notes" class="tab-content">
+
+<% for(let note of notes){ %>
+    <div class="list-card">
+        <div><%= note.name %></div>
+        <button class="watch-btn" onclick="openPDF('<%=note.link%>')">View</button>
+    </div>
+<% } %>
+
+</div>
+
+
+
+
+
+
+<div id="practice" class="tab-content">
+    <div class="list-card">
+        <div>Sheet 1</div>
+        <button class="watch-btn">Open</button>
+    </div>
+</div>
+
+
+</div>
+<div id="player" class="video-container">
+    <button class="close-btn" onclick="hidePlayer()">Hide</button>
+    <iframe id="frame"
+        src=""
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+    </iframe>
+</div>
+
+<script>
+
+function showTab(event,name){
+    document.querySelectorAll(".tab-content")
+        .forEach(t=>t.classList.remove("active"));
+    document.querySelectorAll(".tab")
+        .forEach(t=>t.classList.remove("active"));
+
+    document.getElementById(name).classList.add("active");
+    event.target.classList.add("active");
+}
+
+function playVideo(btn,url){
+    const player=document.getElementById("player");
+    const frame=document.getElementById("frame");
+
+    frame.src=url+"?autoplay=1";
+
+    document.querySelectorAll(".list-card")
+        .forEach(c=>c.classList.remove("active"));
+
+    const card=btn.closest(".list-card");
+    card.classList.add("active");
+
+    card.after(player);
+    player.style.display="block";
+}
+function openPDF(link){
+    window.open(link, "_blank");
+}
+
+
+function hidePlayer(){
+    document.getElementById("frame").src="";
+    document.getElementById("player").style.display="none";
+}
+/* ===== Particles Generator ===== */
+for(let i=0;i<25;i++){
+    const p=document.createElement("div");
+    p.className="particle";
+    p.style.left=Math.random()*100+"%";
+    p.style.top=Math.random()*100+"%";
+    p.style.animationDuration=(10+Math.random()*10)+"s";
+    document.getElementById("particles").appendChild(p);
+}
+
+/* ===== Sound Toggle ===== */
+/* ===== SOUND SYSTEM (FIXED) ===== */
+
+let soundOn = localStorage.getItem("sound") !== "off";
+
+const soundBtn = document.getElementById("soundBtn");
+
+// Visual state
+soundBtn.textContent = soundOn ? "🔊" : "🔇";
+
+function playClickSound(){
+    if(!soundOn) return;
+
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+
+    osc.frequency.value = 700;
+    gain.gain.value = 0.08;
+
+    osc.start();
+    osc.stop(ctx.currentTime + 0.08);
+}
+
+// Attach to ALL buttons (after DOM ready)
+document.addEventListener("click",(e)=>{
+    if(e.target.tagName === "BUTTON"){
+        playClickSound();
+    }
+});
+
+// Toggle sound
+soundBtn.onclick = ()=>{
+    soundOn = !soundOn;
+
+    soundBtn.textContent = soundOn ? "🔊" : "🔇";
+    localStorage.setItem("sound", soundOn ? "on":"off");
+};
+
+/* ===== Dark Mode Toggle ===== */
+// Restore theme
+if(localStorage.getItem("theme")==="dark"){
+    document.body.classList.add("dark");
+}
+
+// Toggle theme
+document.getElementById("themeBtn").onclick=()=>{
+    document.body.classList.toggle("dark");
+
+    localStorage.setItem(
+        "theme",
+        document.body.classList.contains("dark") ? "dark":"light"
+    );
+};
+
+
+
+</script>
+
+</body>
+</html>
