@@ -77,6 +77,8 @@ This project aims to create a centralized academic resource hub where juniors an
 Contributions are welcome!
 If you'd like to improve UI, add new departments, or enhance features, feel free to fork the repo and submit a pull request.
 
+Website LINK : https://saarthi-1o8b.onrender.com/
+
 📄 License
 
 This project is open-source and available under the MIT License.
