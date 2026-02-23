@@ -78,6 +78,7 @@ Contributions are welcome!
 If you'd like to improve UI, add new departments, or enhance features, feel free to fork the repo and submit a pull request.
 
 Website LINK : https://saarthi-1o8b.onrender.com/
+LINKEDIN ID :https://www.linkedin.com/in/rishi-gupta-85bab0232/
 
 📄 License
 
